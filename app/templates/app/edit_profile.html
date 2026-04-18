@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<h2>Edit Profile</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <label>Bio:</label>
+    {{ form.bio }} <br><br>
+
+    <label>Profile Image:</label>
+    {{ form.profile_pic }} <br><br>
+
+    <button class="btn btn-primary">Save</button>
+</form>
+
+<br>
+
+<a href="/profile/{{ request.user.username }}" class="btn btn-secondary">
+    ⬅ Back
+</a>
+
+{% endblock %}

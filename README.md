@@ -1,0 +1,2 @@
+# CodeAlpha_MiniSocialMedia
+projects_codealpha
